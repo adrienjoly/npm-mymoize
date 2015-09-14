@@ -1,11 +1,8 @@
 {
   "name": "mymoize",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "Memoization for standard async functions: function fn(callback){ callback(err, res); }; mymoize(fn)() => {getRes(), getErr()}",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/adrienjoly/npm-mymoize.git"
@@ -15,6 +12,9 @@
   ],
   "author": "Adrien Joly <contact@adrienjoly.com>",
   "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.2"
+  },
   "bugs": {
     "url": "https://github.com/adrienjoly/npm-mymoize/issues"
   },
