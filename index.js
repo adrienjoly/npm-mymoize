@@ -10,7 +10,7 @@ function accessor(idx) {
 
 module.exports = function mymoize(fn) {
   var memoized = async.memoize(fn, _hasher);
-  memoized.getErr = accessor(0);
-  memoized.getRes = accessor(1);
+  memoized.getErr = accessor.bind(memoized, 0);
+  memoized.getRes = accessor.bind(memoized, 1);
   return memoized;
 }
